@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile and Run C++",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "D:\\SL\\CP\\TLE-Eliminators\\1000\\demo.cpp",
+        "-o",
+        "D:\\SL\\CP\\TLE-Eliminators\\1000\\demo.exe",
+        "&&",
+        "D:\\SL\\CP\\TLE-Eliminators\\1000\\demo.exe",
+        "<",
+        "D:\\SL\\CP\\TLE-Eliminators\\1000\\input.txt",
+        ">",
+        "D:\\SL\\CP\\TLE-Eliminators\\1000\\output.txt"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

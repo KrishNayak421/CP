@@ -1,0 +1,22 @@
+// filepath: d:\SL\CP\.vscode\launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "cppvsdbg",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/${input:executablePath}.exe",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Compile and Run C++",
+      "externalConsole": false
+    }
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "executablePath",
+      "description": "Enter the relative path to your executable (e.g., Dynamic-Programming/fibonacci)"
+    }
+  ]
+}
