@@ -8,15 +8,31 @@ using namespace std;
 #define ss second
 #define all(v) v.begin(),v.end()
 
-void solve(){
-    ll n,x;
-    cin>>n>>x;
+bool sorting(vector<ll>& a){
+    bool sorted = true;
+    for(ll i = 0; i < a.size()-1; i++){
+        if(a[i] > a[i+1]) sorted = false;
+    }
+    return sorted;
+}
+void solve() {
+    ll n,k;
+    cin>>n>>k;
     vector<ll> a(n);
     for(ll i=0;i<n;i++) cin>>a[i];
+    
+    if(sorting(a)){
+        cout<<"YES"<<endl;
+        return;
+    }
+    if(k == 1){
+        if(sorting(a)) cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+    }
 
+    else if(k >= 2) cout<<"YES"<<endl;
     
 }
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
