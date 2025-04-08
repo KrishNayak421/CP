@@ -7,30 +7,16 @@ using namespace std;
 #define ff first
 #define ss second
 #define all(v) v.begin(),v.end()
+#define MAX_INT 1000000001
 
-bool sorting(vector<ll>& a){
-    bool sorted = true;
-    for(ll i = 0; i < a.size()-1; i++){
-        if(a[i] > a[i+1]) sorted = false;
-    }
-    return sorted;
-}
 void solve() {
-    ll n,k;
-    cin>>n>>k;
+    ll n;
+    cin>>n;
     vector<ll> a(n);
     for(ll i=0;i<n;i++) cin>>a[i];
     
-    if(sorting(a)){
-        cout<<"YES"<<endl;
-        return;
-    }
-    if(k == 1){
-        if(sorting(a)) cout<<"YES"<<endl;
-        else cout<<"NO"<<endl;
-    }
-
-    else if(k >= 2) cout<<"YES"<<endl;
+    
+    
     
 }
 int main() {
